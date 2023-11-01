@@ -1,0 +1,30 @@
+class conta:
+    def __init__(self, nome, numero, tipo):
+        self.numero = numero
+        self.saldo = 0
+        self.nome = nome
+        self.tipo = tipo
+        self.status = False
+        self.limite = 1000
+
+    def ativarconta(self):
+        if self.status==False:
+            self.status=True
+            print("conta ativada")
+
+    def versaldo(self):
+        print(f"saldo: {self.saldo}")
+
+    def depositar(self, pixnaconta):
+        self.saldo += pixnaconta
+        print(f"Você recebeu um depósito de {pixnaconta} reais")
+
+
+    def sacar(self, pixforadaconta):
+        if self.limite < pixforadaconta:
+            print("veja bem, vc tem até o ouro, mas aí o limite tá baixo po, pode n")
+        elif self.saldo < pixforadaconta:
+            print("sem saldo")
+        else:
+            self.saldo -= pixforadaconta
+            print(f"sacou: {pixforadaconta}")
