@@ -1,0 +1,7 @@
+from conta import *
+
+c1 = conta("Bernardo", 5401, "corrente")
+c1.ativarconta()
+c1.depositar(2000)
+c1.sacar(1000)
+c1.versaldo()
